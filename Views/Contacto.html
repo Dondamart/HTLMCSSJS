@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="My portfolio">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="Author" content="Daniel Martín Bernaldo de Quirós">
+            <meta name="robots" content="index, follow">
+            <link rel="Stylesheet" href="../CSS/Styles.css">
+            <title>Donda designs</title>
+        </head>
+        <body>
+            <header id="contact">
+                <div class="logo">
+                    <img src="../Images/Ddcopia.png" alt="dondadessigns">
+                </div> 
+                <div><h1>Contacto</h1></div>
+                <nav>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="../index.html">Home</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Portfolio.html">Porfolio</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Presupuestos.html">Presupuestos</a></div>
+                    <div id="actual" style="background-color: coral;"><a href="Contacto.html">Contacto</a></div>
+                </nav>
+            </header>
+        <section class="sections">
+            <h2> Visítanos</h2>
+            <p>Conoce nuestras instalaciones</p>
+            <div id="areamapa">
+                <div id="indicaciones">  
+                </div>                    
+                <div id="map">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class=mymedia><h3>Más sobre mí</h3></div>
+            <div class="cajafoot">
+                <div class="iconos">
+                    <a href="https://instagram.com/dondadibus?igshid=ZDdkNTZiNTM=" title="instagram"><img src="../Images/Instagram-Icon.png" alt="insta" title="insta"></a>
+                    <a href="https://es-es.facebook.com/" title="facebook"><img src="../Images/facebook.png" alt="facebook" title="facebook"></a>
+                    <a href="https://twitter.com/?lang=es" title="twitter"><img src="../Images/twitter.png" alt="twitter" title="twitter"></a>
+                </div>
+                <div class="adress">
+                    <h4>Dirección</h4>
+                    <p>Calle Falsa 123 <br> Evergreen Terrace<br>Springfied</p>
+                </div>
+                <div class="legal">
+                    <h4>Legal</h4>
+                    <a href="#">About</a><br>
+                    <a href="#">Privacy</a><br>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>                 
+        </footer>
+        <script src="../Js/init.js"></script>
+        <script src="../Js/mapa.js"></script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYNvFxiMWrWjo3m9DBx-EsFKsHHgMz9fY&callback=initMap">   
+        </script>
+        </body>

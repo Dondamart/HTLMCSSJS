@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="My portfolio">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="Author" content="Daniel Martín Bernaldo de Quirós">
+            <meta name="robots" content="index, follow">
+            <link rel="Stylesheet" href="../CSS/Styles.css">
+            <title>Donda designs</title>
+        </head>
+        <body>
+            <header id="presupuestos">
+                <div class="logo">
+                    <img src="../Images/Ddcopia.png" alt="dondadessigns">
+                </div>
+                <div>
+                    <h1>Presupuestos</h1>
+                </div>
+<!-- MENU DE NAVEGACION -->
+                <nav>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="../index.html">Home</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Portfolio.html">Portfolio</a></div>
+                    <div id="actual" style="background-color: coral;"><a href="Presupuestos.html">Presupuestos</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Contacto.html">Contacto</a></div>
+                </nav>
+            </header>
+        <section class="sections" style="text-align: left; background-color: rgb(136, 228, 220);">
+            <h2 >Obtenga su presupuesto personalizado</h2>
+            <p>Seleccione el tipo de trabajo que desea para obtener un precio orientativo.
+                A continuación, rellene sus datos y, una vez analizado su caso, le contactaremos con un presupuesto a medida.</p>
+<!-- FORMULARIOS -->
+            <form method="post" id="trabajo">
+<!-- APARTADO PRINCIPAL -->
+                <p>Qué tipo de servicio desea</p> 
+                <select id="selection" class="formu" onchange="cambio(),calcularPresupuesto(),seleccionInicial(this.options[this.selectedIndex].className), mostrar(this.options[this.selectedIndex].value)">
+                    <option value="ninguno"> Ninguno</option>
+                    <option value="diseno" class="imagen"> Diseño personalizado</option>
+                    <option value="ilustracion" class="imagen"> Ilustración</option>
+                    <option value="fotografía" class="foto"> Fotografía</option>
+                    <option value="drone" class="drone"> Grabación con drone</option>
+                </select>
+                <h5 hidden id="enaire">Consultar <a href="https://drones.enaire.es/" target="_blank" title="ENAIRE" style="color:rgb(42, 115, 252)">espacios restringidos </a></h5>
+                <p>Seleccione la modalidad</p>
+                <select class="formu" id="modalidad" disabled onchange="complex(),calcularPresupuesto(),seleccionFinal(this.options[this.selectedIndex].value)">
+                    <option value="0">Ninguna</option>
+                    <option value="fisico" class="imagen" hidden >En soporte físico</option>
+                    <option value="digital" class="imagen" hidden>En formato digital</option>
+                    <option value="foto" class="foto" hidden>Sesión de fotos</option>
+                    <option value="evento" class="foto" hidden>Reportaje de un evento</option>
+                    <option value="urbana" class="drone">En zona urbana</option>
+                    <option value="natural" class="drone">En entorno natural (fuera de poblado)</option>
+                 </select>
+                <p> Seleccione el nivel de complejidad</p>
+                <select name="diseno" class="formu" id="complejidad" disabled onchange="calcularPresupuesto()">
+                    <option value="0">Ninguna</option>
+                    <option value="logo" class="fisico digital" hidden>Logotipo</option>
+                    <option value="imagenSencilla" class="fisico digital" hidden>Imagen sencilla</option>
+                    <option value="composicionSencilla" class="fisico digital" hidden>Imagen con pocos elementos y colores planos</option>
+                    <option value="composicionCompleja" class="fisico digital" hidden>Imagen con pocos elementos y con efectos de luz</option>
+                    <option value="interior" class="foto" hidden>Fotografía en interior</option>
+                    <option value="exterior" class="foto" hidden>Fotografía en exteriores</option>
+                    <option value="-1hora" class="evento" hidden>Menos de 1 hora</option>
+                    <option value="1-2 horas" class="evento" hidden>Entre 1 y 2 horas</option>
+                    <option value="2-4 horas" class="evento" hidden>Entre 2 y 4 horas</option>
+                    <option value="+4 horas" class="evento" hidden>Reportaje de larga duración (superior a 5 horas)</option>
+                    <option value="dia completo" class="evento" hidden>Jornada completa</option>
+                    <option value="CTR" class="urbana">Dentro de espacio aéreo restringido</option>
+                    <option value="noCTR" class="urbana">Zona de vuelo libre</option>
+                    <option value="noprotegido" class="natural">Dentro de espacio aéreo restringido</option>
+                    <option value="ZEPACTR" class="natural">Fuera de espacio aéreo restringido</option>
+                </select>
+                <p> ¿Desea algún extra?</p>
+                <div id="extra">
+                Soporte en redes sociales<input type="checkbox" name="extras" class="formu" id="SoporteEnRedes" onchange="calcularPresupuesto()">
+                Copia en físico/impreso<input type="checkbox" name="extras" class="formu" id="CopiaEnFisico" onchange="calcularPresupuesto()">
+                Video del making of<input type="checkbox" name="extras" class="formu" id="VideoMakingOf" onchange="calcularPresupuesto()">
+                </div>    
+                    <p>TOTAL:</p>
+                <textarea readonly class="TOTAL"></textarea>
+                <hr>
+                <p>También ofrecemos servicio de financiación.
+                Utilice nuestra calculadora para saber la cuota mensual.</p>
+                <input type="range" name="financiacion" id="finan" min="1" max="12" list="meses" step="1" value="1" oninput="calcularCuotaMensual(), actualizarValor()">
+                    <datalist id="meses">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </datalist>
+                    <div id="numeroMeses">Meses: 1</div>
+                <p>Tu Cuota Mensual saldría a:</p>
+                <span class="cuota-mensual"></span>
+                <textarea readonly id="cuotam"></textarea>
+            </form>
+
+            <form id="formulario" method="post">                      
+                Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                Apellidos: <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+                Email: <input type="email" name="email" id="email" placeholder="example@mymail.com" required>
+                Teléfono: <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
+                Detalle con más palabras el tipo de servicio que desea: <textarea cols="50" rows="5" name="detalle" placeholder="Escriba aquí qué servicio desea contratar con el mayor detalle posible" required></textarea>
+                <div>He leído y acepto la 
+                    <a href="#" style="color: rgb(93, 130, 252); font-style: italic; text-shadow: 1px 1px black;">política de privacidad</a>
+                    <input type="checkbox" required>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class=mymedia><h3>Más sobre mí</h3></div>
+            <div class="cajafoot">
+                <div class="iconos">
+                    <a href="https://instagram.com/dondadibus?igshid=ZDdkNTZiNTM=" title="instagram"><img src="../Images/Instagram-Icon.png" alt="insta" title="insta"></a>
+                    <a href="https://es-es.facebook.com/" title="facebook"><img src="../Images/facebook.png" alt="facebook" title="facebook"></a>
+                    <a href="https://twitter.com/?lang=es" title="twitter"><img src="../Images/twitter.png" alt="twitter" title="twitter"></a>
+                </div>
+                <div class="adress">
+                    <h4>Dirección</h4>
+                    <p>Calle Falsa 123 <br> Evergreen Terrace<br>Springfied</p>
+                </div>
+                <div class="legal">
+                    <h4>Legal</h4>
+                    <a href="#">About</a><br>
+                    <a href="#">Privacy</a><br>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>                 
+        </footer>
+        <script src="../Js/init.js"></script>

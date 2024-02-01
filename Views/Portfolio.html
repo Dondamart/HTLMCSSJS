@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="My portfolio">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="Author" content="Daniel Martín Bernaldo de Quirós">
+            <meta name="robots" content="index, follow">
+            <link rel="Stylesheet" href="../CSS/Styles.css">
+            <title>Donda designs</title>
+        </head>
+        <body>
+            <!-- Header con el nombre del apartado en grande y el logo en pequeño -->
+            <header id="portfolio">
+                <div class="logo">
+                    <img src="../Images/Ddcopia.png" alt="dondadessigns">
+                </div>
+                <div><h1>Portfolio</h1></div>
+                <!-- menú de navegación -->
+                <nav>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="../index.html">Home</a></div>
+                    <div id="actual" style="background-color: coral;"><a href="Portfolio.html">Portfolio</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Presupuestos.html">Presupuestos</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Contacto.html">Contacto</a></div>
+                </nav>
+            </header>
+        <section class="sections">
+                <!--Sección con los diseños -->
+            <h2> Mis diseños</h2>
+            <div class="diseños" id="dise">    
+                <button class="boton" onclick="sliderizda('dise')"><img src="../Images/izda.png" alt="izda"></button>    
+                <a href="https://www.latostadora.com/web/this_is_the_way/4437644" title="this_is_the_way" class="dise"><img src="https://srv.latostadora.com/designall.dll/This%20is%20the%20way--i:14138515748691413850;d:1574869;w:322;h:322;b:005195.jpg" alt="the way"></a>
+                <a href="https://www.latostadora.com/web/baby_salvaje_aparecio/10296976" title="baby_salvaje_aparecio" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Baby%20salvaje%20apareci%C3%B3--i:14138527871091413850;d:2787109;w:322;h:322;b:005195.jpg" alt="baby_salvaje_aparecio"></a>
+                <a href="https://www.latostadora.com/web/the_child/4919607" title="the_child" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/The%20child--i:14138516543311413850;d:1654331;w:322;h:322;b:9f0e04.jpg" alt="the_child" ></a>
+                <a href="https://www.latostadora.com/web/deathmoon/11737624" title="Deathmoon" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Deathmoon--i:14138518294551413850;d:1829455;w:322;h:322;b:FFFFFF.jpg" alt="deathmoon" ></a>
+                <a href="https://www.latostadora.com/web/noche_estrellada_camiseta/6285326" title="theway" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Noche%20ESTRELLADA--i:14138519373381413850;d:1937338;w:322;h:322;b:2B3039.jpg" alt="NocheESTRELLADA" ></a>
+                <a href="https://www.latostadora.com/web/summertime_star_wars/4723125" title="summertime_star_wars" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Summertime--i:14138516237911413850;d:1623791;w:322;h:322;b:FFFFFF.jpg" alt="Summertime" ></a>
+                <a href="https://www.latostadora.com/web/i_am/11737692" title="groot" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/I%20am--i:14138527869951413850;d:2786995;w:322;h:322;b:FFFFFF.jpg" alt="groot" ></a>
+                <a href="https://www.latostadora.com/web/evolution/11737723" title="evolution" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Evolution--i:14138516567061413850;d:1656706;w:322;h:322;b:FFFFFF.jpg" alt="evolution" ></a>
+                <a href="https://www.latostadora.com/web/accio_coffee/10297027" title="accio_coffee" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Accio%20coffee--i:14138527906401413850;d:2790640;w:322;h:322;b:9f0e04.jpg" alt="accio_coffee" ></a>
+                <a href="https://www.latostadora.com/web/winter_is_coming/11737856" title="winteriscoming" class="dise" hidden><img src="https://srv.latostadora.com/designall.dll/Winter%20is%20coming--i:14138520775891413850;d:2077589;w:322;h:322;b:2B3039.jpg" alt="winteriscoming" ></a>
+                <button class="boton" onclick="sliderdxa('dise')"><img src="../Images/derecha.png" alt="drcha"></button>    
+            </div>    
+            <!-- Sección con mis publicaciones -->
+            <h2> Mis publicaciones</h2>
+                <div class="books">
+                    <a href="https://www.amazon.es/pincel-orgulloso-Daniel-Mart%C3%ADn-Bernaldo/dp/1520273061/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=" title="el_pincel_orgulloso"><img src="https://m.media-amazon.com/images/I/51WKV5s9F1L._SY346_.jpg" alt="libro"></a>
+                </div>
+            <!-- Sección con mis fotografías -->
+            <h2> Muestra fotográfica</h2>
+            <div class="fotos">    
+                <button class="boton" onclick="sliderizda('horizontal')"><img src="../Images/izda.png" alt="izda"></button>    
+                <div id="fotografias">
+                    <img src="../Images/cuenca.jpg" alt="Cuenca" class="horizontal">
+                    <img src="../Images/oviedo.jpg" alt="Gijon" class="horizontal" hidden>
+                    <img src="../Images/cupula.jpg" alt="Sevilla" class="horizontal" hidden>
+                    <img src="../Images/flor.jpg" alt="detalle_flor" class="horizontal" hidden>
+                    <img src="../Images/rio.jpg" alt="vista_aérea_dron" class="horizontal" hidden>
+                    <img src="../Images/postre.jpg" alt="postre" class="horizontal" hidden>
+                    <img src="../Images/paseo.JPG" alt="Paseo" class="horizontal vertical" hidden>
+                    <img src="../Images/mirador.JPG" alt="mirador" class="horizontal vertical" hidden>
+                    <img src="../Images/paraguas.jpg" alt="Gijón2" class="horizontal" hidden>
+                </div>
+                <button class="boton" onclick="sliderdxa('horizontal')"><img src="../Images/derecha.png" alt="drcha"></button>    
+            </div>
+            
+            <!-- Sección con un vídeo grabado con el dron -->
+            <h2> Grabación aérea</h2>
+                <div class="dron">
+                    <video src="../Images/dji_export_1659983738376(1)(1).mp4" controls></video>
+                </div>
+        </section>
+        <!-- footer con las redes, dirección y parte legal -->
+        <footer>
+            <div class=mymedia><h3>Más sobre mí</h3></div>
+            <div class="cajafoot">
+                <div class="iconos">
+                    <a href="https://instagram.com/dondadibus?igshid=ZDdkNTZiNTM=" title="instagram"><img src="../Images/Instagram-Icon.png" alt="insta" title="insta"></a>
+                    <a href="https://es-es.facebook.com/" title="facebook"><img src="../Images/facebook.png" alt="facebook" title="facebook"></a>
+                    <a href="https://twitter.com/?lang=es" title="twitter"><img src="../Images/twitter.png" alt="twitter" title="twitter"></a>
+                </div>
+                <div class="adress">
+                    <h4>Dirección</h4>
+                    <p>Calle Falsa 123 <br> Evergreen Terrace<br>Springfied</p>
+                </div>
+                <div class="legal">
+                    <h4>Legal</h4>
+                    <a href="#">About</a><br>
+                    <a href="#">Privacy</a><br>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>                 
+        </footer>
+        <script src="../Js/init.js"></script>
+        </body>

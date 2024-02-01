@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <!-- metadatos de la web y link al CSS -->
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="My portfolio">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="Author" content="Daniel Martín Bernaldo de Quirós">
+            <meta name="robots" content="index, follow">
+            <link rel="Stylesheet" href="CSS/Styles.css">
+            <title>Donda designs</title>
+        </head>
+        <body>
+            <header>
+                <!-- Cabecera y menú de navegación debajo -->
+                <div class="cabeza">
+                    <h1>DONDA DESIGNS</h1>
+                    <!-- <img src="Images/Ddcopia.png" alt="dondadessigns"> -->
+                <nav>
+                    <div id="actual" style="background-color: coral;"><a  href="index.html">Home</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Views/Portfolio.html">Portfolio</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Views/Presupuestos.html">Presupuestos</a></div>
+                    <div onmouseover="navhover()" onmouseout="normalAgain()"><a href="Views/Contacto.html">Contacto</a></div>
+                </nav>
+                </div>
+            </header>
+            <!-- Parte principal -->
+            <main>
+                <!-- Panel lateral izquierdo -->
+                <aside class="aside">
+                    <div>
+                        <h3>Bienvenido</h3>
+                        <p>Estás en una web creada por Daniel Martín Bernaldo de Quirós:</p>
+                        <ul>
+                            <li>Desarrollador web</li>
+                            <li>Diseñador</li>
+                            <li>Ilustrador</li>
+                            <li>Fotógrafo</li>
+                            <li>Piloto de drones</li>
+                            <li>Escritor</li>
+                            <li>Docente</li>
+                        </ul>
+                    </div>
+                    <div id="noticias">
+                        <h3>Ejemplo de noticias dinámicas con API de Rick y Morty</h3>
+                        <div id="cajanoticias" onload="cargaNoticias()">
+                        </div>
+                    </div>
+                </aside>
+                <!-- panel lateral derecho con noticiero de la web -->
+                    <div id="noticiero"></div>
+            </main>
+            <!-- Footer con las redes sociales, dirección y el apartado legal -->
+            <footer>
+                <div class=mymedia><h3>Más sobre mí</h3></div>
+                <div class="cajafoot">
+                    <div class="iconos">
+                        <a href="https://instagram.com/dondadibus?igshid=ZDdkNTZiNTM=" title="instagram"><img src="Images/Instagram-Icon.png" alt="insta" title="insta"></a>
+                        <a href="https://es-es.facebook.com/" title="facebook"><img src="Images/facebook.png" alt="facebook" title="facebook"></a>
+                        <a href="https://twitter.com/?lang=es" title="twitter"><img src="Images/twitter.png" alt="twitter" title="twitter"></a>
+                    </div>
+                    <div class="adress">
+                        <h4>Dirección</h4>
+                        <p>Calle Falsa 123 <br> Evergreen Terrace<br>Springfied</p>
+                    </div>
+                    <div class="legal">
+                        <h4>Legal</h4>
+                        <a href="#">About</a><br>
+                        <a href="#">Privacy</a><br>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>                 
+            </footer>
+            <script src="Js/init.js"></script>
+            <script src="Js/noticias.js"></script>
+        </body>

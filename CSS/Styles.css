@@ -1,0 +1,443 @@
+/* Configuración general */
+html{
+    margin: 0;
+    background-color: rgb(173, 236, 236);
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* Efectos de los links*/
+nav div:hover{
+    text-transform:uppercase ;
+    background-color: coral ;
+}
+a:any-link{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-transform:uppercase ;
+}
+/* Configuración del body */
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+/* Configuración de la cabecera y el logo */
+header{
+    text-align: center;
+    background-color: rgb(148, 207, 187);
+    background-position-y: center;
+    background-size: cover;
+    font-style: italic;
+    color:white;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    padding-top: 20px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.44) ;
+}
+h1{
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.596);
+}
+.logo{
+    z-index: 8;
+    display: flex;
+    height: 30px;
+    width: 300px;
+    position: absolute;
+    padding-left: 30px;
+}
+/* Menú de navegación */
+nav{
+    padding: 5px;
+    display: flex;
+    padding: 0;
+    justify-content:space-around;
+}
+nav div{
+    padding: 20px;
+    width: 25%;
+    flex-wrap: wrap;
+    -ms-flex-wrap:wrap ;
+    background-color: rgb(92, 187, 155);
+    font-size: large;
+}
+/* filtros de color de cada header según su sección */
+#portfolio{
+    filter:hue-rotate(210deg);
+}
+#presupuestos{
+    filter:hue-rotate(390deg) saturate(150%)
+}
+#contact{
+    filter: hue-rotate(240deg) saturate(3); 
+}
+
+/* Parte principal */
+main{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+/* Panel izquierdo (index) */
+.aside{
+    background-color: rgb(28, 168, 150);
+    color: White;
+    width: 25%;
+    margin-top: 130px;
+    padding:30px;
+    flex-grow: 2;
+    padding-top: 50px;
+    text-shadow: 1px 1px 2px black;
+    font-style: italic;
+    line-height: 40px; 
+    flex-grow: 1; 
+} 
+#cajanoticias{
+    width:fit-content;
+    height: 400px;
+    background-color: white;
+    color: black;
+    overflow-y: scroll;
+    padding-left: 10px;
+}
+/* Panel derecho (index) */
+.derecho{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    padding-top: 50px;
+    color: rgb(0, 0, 0);
+    height: 1030px;
+    margin-top: 130px;
+    height: fit-content;
+}
+
+/* NOTICIERO */
+#noticiero{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 180px;
+}
+#noticiero img{
+    max-width: 600px;
+    max-height: 450px;
+}
+#noticiero a{
+    color: blue;
+}
+#noticiero a:hover{
+    text-shadow: 0px 0px 3px blue;
+}
+
+/* Secciones de las secundarias */
+.sections{
+    background-color: rgb(253, 233, 233);
+    width: 100%;
+    height: fit-content;
+    margin-top: 140px;
+    padding-left: 10px;
+    padding-top: 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+/* Porfolio: Apartado de diseños */
+.diseños{
+    display: flex;
+    flex-direction:row;
+    flex-flow:nowrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+.diseños img{
+    border-radius: 10px;
+}
+.boton{
+    height: 100px;
+    background-color: rgba(0, 255, 255, 0);
+    border-color: rgba(250, 235, 215, 0);
+    cursor: pointer;
+}
+.boton img{
+    height: 90px;
+    filter: invert(0.5) sepia() hue-rotate(180deg);
+}
+.boton img:hover{
+    filter: invert();
+}
+/* Portfolio: apartado de publicaciones */
+.books{
+margin-top: 40px;
+width: 100%;
+display:flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+}
+.books img{
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.642);
+    z-index: 1;    
+}
+
+/* Porfolio:apartado de fotografías */
+.fotos{
+    margin-top: 40px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#fotografias img{
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    justify-items: center;
+}
+/* Portfolio: Apartado video dron */
+.dron{
+    width: 80%;
+    display: flex;
+    height: min-content;
+    justify-content:center;
+}
+.dron>video{
+    width: 70%;
+    padding: 20px;
+    margin-left: 25%;
+}
+/* Presupuestos:Formulario */
+
+#trabajo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 30%;
+    padding-bottom: 20px;
+    padding: 20px;
+    width: fit-content;
+    max-width:100%;
+
+}
+#extra{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    align-items:center;
+    width: 100%;
+}
+#extra input{
+    width: 100%;
+    margin-right: 10%;
+}
+#meses{
+    margin: 10px;
+}
+#formulario{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width:80%;
+    padding-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(248, 218, 190);
+}
+#formulario input{
+    margin-bottom: 20px;
+    width:60%;
+    padding: 10px;
+}
+#formulario textarea{
+    width:60%;
+}
+.formu {
+    width: 100%;
+    height: 2rem;
+}
+#formulario button{
+    width: 30%;
+    height: 2rem;
+}
+/* Contacto: Página del mapa */
+#areamapa{
+    width: 80%;
+    height: 500px;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+}
+#map{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    object-fit:fill;
+    width:70%;
+    height: 100%;
+    padding-bottom: 90px;
+    flex-grow: 1;
+}
+#indicaciones{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    flex-grow: 1;
+    background-color: white;
+    overflow-y: scroll;
+    font-size: small;
+    
+}
+#cajitamapa{
+    height: 100%;
+    width: 100%;
+}
+#cajitamapa img{
+    height:50%;
+    width: 100%;
+    object-fit: scale-down;
+}
+/* Footer con redes sociales, dirección */
+footer{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+}
+/* Footer:título */
+.mymedia{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    height: 20%;
+}
+/* Caja del footer con el resto de contenido */
+.cajafoot{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(0, 0, 0);
+    height: 80%;
+}
+/* Parte de los iconos */
+.iconos{
+    display: flex;
+    height:100%;
+    width: 100%;
+    padding: 10px;
+}
+.iconos img{
+    width: 50px;
+    margin-left:10px;
+}
+.iconos img:hover{
+width: 60px;}
+/* Parte de la dirección */
+.adress{
+    height:100%;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+/* Parte legal */
+.legal{
+    height:100%;
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+/* Versión para móvil */
+@media screen and (max-width: 700px){
+
+    header{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav div{
+        width: 100%;
+        padding:5px;
+    }
+    main{
+        flex-direction: column;
+    }
+    body{
+        width:100%;
+    }
+    .aside{
+        margin-top: 210px;
+        width: 100%;
+        height: fit-content;
+    }
+    .boton{
+        height: 50px;
+    }
+    .boton img{
+        height: 40px;
+    }
+
+    .derecho{
+        width: 100%;
+        margin: 0;
+        height: max-content;
+    }
+    .sections{
+        margin-top: 190px;
+        padding-top: 30px;
+        padding-left: 0;
+        width: 100%;
+    }
+    #noticiero img{
+        max-width: 80%;
+        max-height: 350px;
+    }
+    .designs{
+        margin-top: 0px;
+    }
+    #formulario input{
+    width:90%;
+    }
+    #formulario textarea{
+    width:90%;
+    }
+    #map{
+        width: 100%;
+        height:80%;
+        padding:0;
+        justify-content: center;
+        align-content: center;
+        margin: 0px;
+    }
+    #areamapa{
+        width:100%;
+        height: 500px;
+        margin-bottom: 2%;
+        margin-left: 0;
+        background-color: chocolate;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #indicaciones{
+        width:100%;
+        height:20%;
+    }
+
+    #cajitamapa{
+       scale: 90%;
+    }
+    footer{
+        width:100%;
+    }
+}
